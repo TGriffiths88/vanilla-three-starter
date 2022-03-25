@@ -581,7 +581,7 @@ class App {
 const app = new App();
 app.init();
 
-},{"three":"ktPTu","three/examples/jsm/controls/OrbitControls":"7mqRv","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./assets/shaders/fragmentShader.glsl":"hYhvo","./assets/shaders/vertexShader.glsl":"k1b7i","three/examples/jsm/libs/stats.module":"6xUSB"}],"ktPTu":[function(require,module,exports) {
+},{"three":"ktPTu","three/examples/jsm/controls/OrbitControls":"7mqRv","three/examples/jsm/libs/stats.module":"6xUSB","./assets/shaders/fragmentShader.glsl":"hYhvo","./assets/shaders/vertexShader.glsl":"k1b7i","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"ktPTu":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "ACESFilmicToneMapping", ()=>ACESFilmicToneMapping
@@ -31069,13 +31069,7 @@ class MapControls extends OrbitControls {
     }
 }
 
-},{"three":"ktPTu","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"hYhvo":[function(require,module,exports) {
-module.exports = "precision mediump float;\n#define GLSLIFY 1\nvarying vec2 vUv;\n\nvoid main () {\n    gl_FragColor = vec4(vUv,0., 1.);\n}";
-
-},{}],"k1b7i":[function(require,module,exports) {
-module.exports = "#define GLSLIFY 1\nuniform float uTime;\nvarying vec2 vUv;\n\nvoid main() {\n    vUv = uv;\n    vec3 newPosition = vec3(position.x, position.y + sin(uTime) * 0.1, position.z);\n    vec4 mvPosition = modelViewMatrix * vec4( newPosition, 1.0 );\n\tgl_Position = projectionMatrix * mvPosition;\n}";
-
-},{}],"6xUSB":[function(require,module,exports) {
+},{"three":"ktPTu","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6xUSB":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var Stats = function() {
@@ -31171,6 +31165,12 @@ Stats.Panel = function(name, fg, bg) {
 };
 exports.default = Stats;
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["6IXwR","bNKaB"], "bNKaB", "parcelRequire94c2")
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"hYhvo":[function(require,module,exports) {
+module.exports = "precision mediump float;\n#define GLSLIFY 1\nvarying vec2 vUv;\n\nvoid main () {\n    gl_FragColor = vec4(vUv,0., 1.);\n}";
+
+},{}],"k1b7i":[function(require,module,exports) {
+module.exports = "#define GLSLIFY 1\nuniform float uTime;\nvarying vec2 vUv;\n\nvoid main() {\n    vUv = uv;\n    vec3 newPosition = vec3(position.x, position.y + sin(uTime) * 0.1, position.z);\n    vec4 mvPosition = modelViewMatrix * vec4( newPosition, 1.0 );\n\tgl_Position = projectionMatrix * mvPosition;\n}";
+
+},{}]},["6IXwR","bNKaB"], "bNKaB", "parcelRequire94c2")
 
 //# sourceMappingURL=index.0641b553.js.map
